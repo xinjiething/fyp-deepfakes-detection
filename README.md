@@ -3,12 +3,16 @@
 ## Introduction
 
 Final Year Project for Bachelor of Computer Science, Monash University with topic DeepFake Detection using Convolutional Neural Network
+
 Team Members: Chan Jun Cheng, Thing Xin Jie, Yap Hao Zher
+
 Project Supervisor: Prof. Ir. Dr. Raphael C.-W. Phan, CEng, FHEA (raphael.phan@monash.edu)
+
 
 ## Overview
 
 A DeepFake detection program created by training the MesoNet architecture (https://github.com/dariusaf/mesonet) with negative samples generated which simulates the resolution inconsistencies (https://github.com/danmohaha/CVPRW2019_Face_Artifacts) created as a by-product of the current DeepFake algorithm.
+
 
 ## Requirements
 
