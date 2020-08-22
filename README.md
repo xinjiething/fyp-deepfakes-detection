@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Final Year Project for Bachelor of Computer Science, Monash University with topic DeepFake Detection using Convolutional Neural Network
+Final Year Project for Bachelor of Computer Science, Monash University (S1/2020) with topic DeepFake Detection using Convolutional Neural Network
 
 Team Members: Chan Jun Cheng, Thing Xin Jie, Yap Hao Zher
 
