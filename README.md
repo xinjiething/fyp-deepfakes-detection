@@ -13,7 +13,6 @@ Project Supervisor: Prof. Ir. Dr. Raphael C.-W. Phan, CEng, FHEA (raphael.phan@m
 
 A DeepFake detection program created by training the MesoNet architecture (https://github.com/dariusaf/mesonet) with negative samples generated which simulates the resolution inconsistencies (https://github.com/danmohaha/CVPRW2019_Face_Artifacts) created as a by-product of the current DeepFake algorithm.
 
-
 ## Requirements
 
 - Ubuntu 16.04
@@ -42,21 +41,32 @@ apt-get update
 apt-get install -y build-essential libgl1-mesa-dev qt512-meta-minimal qt512webengine qt512svg
 
 # install SIP
-wget https://www.riverbankcomputing.com/static/Downloads/sip/4.19.14/sip-4.19.14.tar.gz
-tar -xvzf sip-4.19.14.tar.gz
+wget https://www.riverbankcomputing.com/static/Downloads/sip/4.19.14/sip-4.19.24.tar.gz
+tar -xvzf sip-4.19.24.tar.gz
 cd sip-4.19.14
 python configure.py --sip-module=PyQt5.sip
 make -j 4
 make install
 
 # install PyQt5
-wget https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.12/PyQt5_gpl-5.12.tar.gz
-tar -xvzf PyQt5_gpl-5.12.tar.gz
-cd PyQt5_gpl-5.12
+wget https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.12/PyQt5-5.15.1.dev2008271829.tar.gz
+tar -xvzf PyQt5-5.15.1.dev2008271829.tar.gz
+cd PyQt5-5.15.1.dev2008271829
 LD_LIBRARY_PATH=/opt/qt512/lib python configure.py --confirm-license --disable=QtNfc --qmake=/opt/qt512/bin/qmake QMAKE_LFLAGS_RPATH=
 make -j 4
 make install
 ```
+
+Our project is done using Windows Subsytem for Linux. Main reason for this is it is easy to install and use (it's on Microsoft Store), and we can access our local machine's filesystem easily without needing to synchronise. However, a disadvantage for this is it lacks a graphical interface, which means that we need the help of external program in order to run the ui. To export display from linux terminal, we need to install XMing(Steps can be referred to this video: https://www.youtube.com/watch?v=3_iGSpyGswo,
+Link to download XMing: https://drive.google.com/file/d/15vp-rQ79o_cSTwCGQbkl42cgpkq2zn1P/view).
+
+Steps to start the UI
+1) Launch Ubuntu 16.04 terminal.
+2) Launch XMing.
+3) Run the command "export DISPLAY=:0.0" to export display from linux terminal, here 0.0 indicates the XMing server and can be verified by hovering over the icon at the bottom right.
+4) cd to the repository that was downloaded.
+5) Run the command "python facespot.py" to start the UI.
+
 
 ## Preprocess, training and testing paths
 
